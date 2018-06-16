@@ -1,0 +1,124 @@
+embedding_dim = 128
+filter_sizes = "3,4,5"
+num_filters = 128
+dropout_keep_prob = 0.5
+l2_reg_lambda = 0.0
+batch_size = 64
+num_epochs = 100
+evaluate_every = 100
+num_checkpoints = 5
+
+training dataset size: 1 MB
+eval dataset size: 1 MB
+
+Number of Tests: 257
+Accuracy: 0.762646
+
+--------------------------
+
+embedding_dim = 128
+filter_sizes = "3,4,5"
+num_filters = 128
+dropout_keep_prob = 0.5
+l2_reg_lambda = 0.0
+batch_size = 64
+num_epochs = 200 <- changed +100
+evaluate_every = 100
+num_checkpoints = 5
+
+training dataset size: 1 MB
+eval dataset size: 1 MB
+
+Number of Tests: 257
+Accuracy: 0.548638
+
+--------------------------
+
+embedding_dim = 128
+filter_sizes = "4,5,6" <- changed +1 each
+num_filters = 128
+dropout_keep_prob = 0.5
+l2_reg_lambda = 0.0
+batch_size = 64
+num_epochs = 200
+evaluate_every = 100
+num_checkpoints = 5
+
+training dataset size: 1 MB
+eval dataset size: 1 MB
+
+Number of Tests: 257
+Accuracy: 0.719844 // Even though accuracy is higher, I believe it's due to higher filter size causing over-fitting the results.
+
+--------------------------
+
+embedding_dim = 128
+filter_sizes = "2,3,4" <- changed -2 each
+num_filters = 128
+dropout_keep_prob = 0.5
+l2_reg_lambda = 0.0
+batch_size = 64
+num_epochs = 200
+evaluate_every = 100
+num_checkpoints = 5
+
+training dataset size: 1 MB
+eval dataset size: 1 MB
+
+Number of Tests: 257
+Accuracy: 0.731518 // Some reason it became higher, but due to small dataset, this might be the reason for the odd behavior.
+
+--------------------------
+
+embedding_dim = 128
+filter_sizes = "2,3,4"
+num_filters = 200 <- changed +72
+dropout_keep_prob = 0.5
+l2_reg_lambda = 0.0
+batch_size = 64
+num_epochs = 200
+evaluate_every = 100
+
+training dataset size: 1 MB
+eval dataset size: 1 MB
+
+Number of Tests: 257
+Accuracy: 0.766537
+
+--------------------------
+
+embedding_dim = 128
+filter_sizes = "2,3,4"
+num_filters = 200
+dropout_keep_prob = 0.5
+l2_reg_lambda = 0.0
+batch_size = 100 <- changed +36
+num_epochs = 200
+evaluate_every = 100
+
+training dataset size: 1 MB
+eval dataset size: 1 MB
+
+Number of Tests: 257
+Accuracy: 0.7393
+
+--------------------------
+
+embedding_dim = 128
+filter_sizes = "2,3,4"
+num_filters = 200
+dropout_keep_prob = 0.5
+l2_reg_lambda = 0.0
+batch_size = 100
+num_epochs = 200
+evaluate_every = 100
+
+training dataset size: 2.2 MB <- +1.2 MB
+eval dataset size: 2.2 MB <1- +1.2 MB
+
+Number of Tests: 523
+Accuracy: 0.755258
+
+
+
+
