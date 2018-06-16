@@ -1,4 +1,4 @@
-** Artificial Intelligence for Food **
+## Artificial Intelligence for Food
 
 ## System Requirements
 
